@@ -1,0 +1,290 @@
+Analysis & Elaboration report for arm32bit
+Fri Oct 28 18:17:06 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "Y_mux:Y_mux_test"
+  6. Port Connectivity Checks: "X_mux:X_mux_test"
+  7. Port Connectivity Checks: "src1mux:src1mux_test"
+  8. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Fri Oct 28 18:17:06 2022       ;
+; Quartus Prime Version         ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Revision Name                 ; arm32bit                                    ;
+; Top-level Entity Name         ; testbench                                   ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
+; Top-level entity name                                                           ; testbench          ; arm32bit           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Y_mux:Y_mux_test"                                                                                                                                                                     ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; select    ; Input  ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out       ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (32 bits) it drives.  The 28 most-significant bit(s) in the port expression will be connected to GND.          ;
+; out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "X_mux:X_mux_test"                                                                                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                                          ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; select ; Input  ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "src1mux:src1mux_test"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Processing started: Fri Oct 28 18:17:00 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arm32bit -c arm32bit --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file de0_nano_soc_baseline.v
+    Info (12023): Found entity 1: de0_nano_soc_baseline File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/de0_nano_soc_baseline.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file src1mux.sv
+    Info (12023): Found entity 1: src1mux File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/src1mux.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file x_mux.sv
+    Info (12023): Found entity 1: X_mux File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/X_mux.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file y_mux.sv
+    Info (12023): Found entity 1: Y_mux File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/Y_mux.sv Line: 1
+Info (12127): Elaborating entity "testbench" for the top level hierarchy
+Warning (10755): Verilog HDL warning at testbench.sv(16): assignments to clk create a combinational loop File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 16
+Info (12128): Elaborating entity "src1mux" for hierarchy "src1mux:src1mux_test" File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 11
+Info (12128): Elaborating entity "X_mux" for hierarchy "X_mux:X_mux_test" File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 12
+Info (12128): Elaborating entity "Y_mux" for hierarchy "Y_mux:Y_mux_test" File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 13
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Rn[31]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[30]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[29]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[28]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[27]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[26]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[25]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[24]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[23]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[22]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[21]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[20]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[19]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[18]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[17]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[16]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[15]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[14]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[13]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[12]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[11]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[10]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[9]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[8]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[7]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[6]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[5]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[4]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[3]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[2]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[1]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rn[0]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 4
+    Warning (12110): Net "Rs[31]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[30]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[29]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[28]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[27]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[26]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[25]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[24]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[23]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[22]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[21]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[20]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[19]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[18]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[17]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[16]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[15]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[14]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[13]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[12]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[11]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[10]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[9]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[8]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[7]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[6]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[5]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[4]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[3]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[2]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[1]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "Rs[0]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 5
+    Warning (12110): Net "select[1]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 7
+    Warning (12110): Net "select[0]" is missing source, defaulting to GND File: D:/MEGA/SDSU/2022 Fall/Electrical Engineering 475/Arm Processor/arm32bit/testbench.sv Line: 7
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 70 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Fri Oct 28 18:17:06 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:16
+
+
