@@ -10,3 +10,4 @@ master
 output_files/
 *.json
 simulation/
+*.txt
