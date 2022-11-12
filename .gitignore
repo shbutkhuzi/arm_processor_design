@@ -41,21 +41,21 @@
 /*
 !/*.gitignore
 ##
-# !*.sv
-# !*.v
-*.qpf
-!*.qsf
-!*.qws
-!*.bdf
-!*.vhd
+!*.sv
 !*.v
-!*.ptf
-!*.bsf
-!**/class.ptf
-!*.tbd
-!*.sof
+# *.qpf
+# !*.qsf
+# !*.qws
+# !*.bdf
+# !*.vhd
+# !*.v
+# !*.ptf
+# !*.bsf
+# !**/class.ptf
+# !*.tbd
+# !*.sof
 ## tbd
 
-!*.tcl
+# !*.tcl
 
 # End of https://www.toptal.com/developers/gitignore/api/alteraquartusii
