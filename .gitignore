@@ -42,7 +42,6 @@
 !/*.gitignore
 ##
 !*.sv
-!*.v
 # *.qpf
 # !*.qsf
 # !*.qws
