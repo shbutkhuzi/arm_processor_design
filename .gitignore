@@ -1,0 +1,12 @@
+*.bak
+*.qpf
+*.qsf
+*.qws
+*.qdf
+*.rpt
+db/
+incremental_db/
+master
+output_files/
+*.json
+simulation/
