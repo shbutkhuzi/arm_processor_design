@@ -38,6 +38,10 @@ always @(posedge clk) begin
 	if ((ARd == 4'b1111) && (wen_ARd == 1)) begin
 		r_file[15] = Rd_data;
 	end else r_file[15] = PC_next;
+	
+	if (r_file[15] > 60) begin
+		r_file[15] = 0;
+	end
 end
 
 endmodule
