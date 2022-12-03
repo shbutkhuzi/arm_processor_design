@@ -4,7 +4,8 @@ module reg_file(
 	output [31:0] Rn, Rs, Rm, Rd,
 	input [31:0] Rd_data,
 	output [31:0] PC_out,
-	input [31:0] PC_next
+	input [31:0] PC_next,
+	input ctrl_BL
 );
 
 logic [31:0] r_file [16] = '{32'b10011001001101101000111101111110,
@@ -41,6 +42,10 @@ always @(posedge clk) begin
 	
 	if (r_file[15] > 60) begin
 		r_file[15] = 0;
+	end
+	
+	if (ctrl_BL) begin
+		r_file[14] = r_file[15] + 4;
 	end
 end
 
