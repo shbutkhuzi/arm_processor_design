@@ -5,7 +5,8 @@ module reg_file(
 	input [31:0] Rd_data,
 	output [31:0] PC_out,
 	input [31:0] PC_next,
-	input ctrl_BL
+	input ctrl_BL,
+	output [7:0] R12
 );
 
 logic [31:0] r_file [16] = '{32'b00110001001001110100100101101011,
@@ -30,6 +31,8 @@ assign Rs 	  = r_file[ARs];
 assign Rm 	  = r_file[ARm];
 assign Rd 	  = r_file[ARd];
 assign PC_out = r_file[15];
+
+assign R12 = r_file[12][7:0];
 
 always @(posedge clk) begin
 	if (wen_ARd) begin
