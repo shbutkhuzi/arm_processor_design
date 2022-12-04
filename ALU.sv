@@ -18,7 +18,7 @@ MyAdder MyAdder_inst1(A[1], B[1], S[1], cout[1]);
 MyAdder MyAdder_inst2(A[2], B[2], S[2], cout[2]);
 MyAdder MyAdder_inst3(A[3], B[3], S[3], cout[3]);
 
-always @(ctrl_cmd) begin
+always @(ctrl_cmd, src1, src2, current_flags, S[0], S[1], S[2], S[3], cout[0], cout[1], cout[2], cout[3]) begin
 	case(ctrl_cmd[7:6])
 		// Data Processing Instructions
 		2'b00: begin

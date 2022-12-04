@@ -57,12 +57,12 @@ always_comb begin
 										default: src2 <= 0;
 									endcase
 								end
-						1'b1: src2 <= {20'h00000, imm[11:0]};
+						1'b1: src2 <= imm[11] ? {20'hFFFFF, imm[11:0]} : {20'h00000, imm[11:0]};
 					default: src2 <= 0;
 					endcase
 				 end
 		// Branch
-		2'b10: src2 <= {6'b000000, imm[23:0], 2'b00};
+		2'b10: src2 <= imm[23] ? {6'b111111, imm[23:0], 2'b00} : {6'b000000, imm[23:0], 2'b00};
 		// Multiply
 		2'b11: src2 <= Rm;
 		default: src2 <= 0;
