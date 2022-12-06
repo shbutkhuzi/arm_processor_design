@@ -83,7 +83,7 @@ This program is run when bootloader (first instruction in instruction memory) is
 
 ![](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/second_program_shot1.png?raw=true)
 
-First three instructions initialize contents of R5, R6 and R12. R5 contains counter, R6 contains maximum value, which is loaded from data memory (in this case 5), and R12 contains the bits that are toggled. The main part of the program checks if content of R5 and R6 are equal. If they are equal, R12 is toggled and R5 is initialized to 0, if not R5 is incremented. And this is repeated infinitely.
+First three instructions initialize contents of R5, R6 and R12. R5 contains counter, R6 contains maximum value to count up to, which is loaded from data memory (in this case 5), and R12 contains the bits that are toggled. The main part of the program checks if content of R5 and R6 are equal. If they are equal, R12 is toggled and R5 is initialized to 0, if not R5 is incremented. And this is repeated infinitely.
 
 ![](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/second_program_shot2.png?raw=true)
 
