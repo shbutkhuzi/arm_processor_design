@@ -19,7 +19,7 @@ Processor unites following modules:
 
 All these instructions are instanciated in PROCEESSOR.sv file and connections among them are as shown in the picture below.
 
-![some text](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/first_program.png?raw=true)
+![](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/first_program.png?raw=true)
 
 Processor supports following data processing instructions from ARM instruction set:
 
@@ -43,7 +43,7 @@ BNE by -3 instructions from here
 
 The first instruction adds immediate value 53 to register R0 and writes result in register R1
 
-![](RackMultipart20221206-1-q6tcz6_html_4a91afbb9748b6fe.png)
+![](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/first_program.png?raw=true)
 
 The very first instruction in instruction memory is branch instruction which jumps to first program stored in instruction memory. In this case it is second instruction, therefore addition is performed when PC\_out is 4. Initially content of R1 was just randomly distributed bits, but after this instruction it became 824658336, since 824658283 + 53 = 824658336. The following instruction made R1 subtract from R1\<\<26 and wrote result in R2. So, let's check this. R1 in binary is 0011 0001 0010 0111 0100 1001 1010 0000 and R1\<\<26 is
 
@@ -81,10 +81,10 @@ B by -6 instructions from here
 
 This program is run when bootloader (first instruction in instruction memory) is configured to jump to the location of this program, which is 20.
 
-![](RackMultipart20221206-1-q6tcz6_html_761b4212399e26d.png)
+![](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/second_program_shot1.png?raw=true)
 
 First three instructions initialize contents of R5, R6 and R12. R5 contains counter, R6 contains maximum value, which is loaded from data memory (in this case 5), and R12 contains the bits that are toggled. The main part of the program checks if content of R5 and R6 are equal. If they are equal, R12 is toggled and R5 is initialized to 0, if not R5 is incremented. And this is repeated infinitely.
 
-![](RackMultipart20221206-1-q6tcz6_html_78e7b37004345b16.png)
+![](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/second_program_shot2.png?raw=true)
 
 From the picture we can see that R12 is toggled when counter reaches 5, and then it returns to 0.
