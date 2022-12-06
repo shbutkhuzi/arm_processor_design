@@ -19,7 +19,7 @@ Processor unites following modules:
 
 All these instructions are instanciated in PROCEESSOR.sv file and connections among them are as shown in the picture below.
 
-![](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/first_program.png?raw=true)
+![some text](https://github.com/shbutkhuzi/arm_processor_design/blob/main/Screenshots/first_program.png?raw=true)
 
 Processor supports following data processing instructions from ARM instruction set:
 
